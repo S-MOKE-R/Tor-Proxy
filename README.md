@@ -68,7 +68,12 @@ git clone https://github.com/S-MOKE-R/tor-controller.git
 cd tor-controller
 chmod +x install.sh
 ./install.sh
-Option 2: Linux Manual Installation
+
+
+
+
+---
+### Option 2: Linux Manual Installation
 bash
 # Install dependencies
 sudo apt update
