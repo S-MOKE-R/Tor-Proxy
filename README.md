@@ -28,6 +28,7 @@
 ## 🎯 What is This Tool?
 
 This is a **FREE proxy manager** that lets you:
+
 - Connect/disconnect to Tor with one click
 - See your real IP and Tor IP side by side
 - Get a new Tor identity instantly
