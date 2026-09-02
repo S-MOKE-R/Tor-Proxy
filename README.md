@@ -60,20 +60,14 @@ This is a **FREE proxy manager** that lets you:
 
 ## 🚀 Installation
 
-### Linux (Debian/Ubuntu/Mint/Kali)
+### Option 1: One-Click Installer (Recommended)
 
 ```bash
-# Clone the repository
 git clone https://github.com/S-MOKE-R/tor-controller.git
 cd tor-controller
-
-# Make installer executable
 chmod +x install.sh
-
-
-
-Linux Manual Installation
-
+./install.sh
+Option 2: Linux Manual Installation
 bash
 # Install dependencies
 sudo apt update
@@ -84,8 +78,7 @@ pip3 install requests psutil pyperclip pillow
 
 # Run the app
 python3 tor_controller.py
-
-Windows
+Option 3: Windows Installation
 powershell
 # Install Python from python.org (check "Add to PATH")
 
@@ -95,8 +88,7 @@ pip install requests psutil pyperclip pillow
 # Download tor_controller.py from GitHub
 # Run
 python tor_controller.py
-
-macOS
+Option 4: macOS Installation
 bash
 # Install Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -109,7 +101,6 @@ pip3 install requests psutil pyperclip pillow
 
 # Download and run
 python3 tor_controller.py
-
 🔧 Configuration
 Linux (Tor & Privoxy)
 bash
@@ -120,16 +111,15 @@ sudo systemctl enable tor
 # Start Privoxy (HTTP proxy)
 sudo systemctl start privoxy
 sudo systemctl enable privoxy
-
-Windows
+Windows Configuration
+powershell
 # Download and install Tor Browser from https://www.torproject.org/
 # Run Tor in the background
 # The app will use 127.0.0.1:9050 as the SOCKS5 proxy
-
-macOS
+macOS Configuration
+bash
 # Start Tor as a service
 brew services start tor
-
 🎯 Usage
 Launch the App
 bash
@@ -193,5 +183,3 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ⭐ Support
 If you find this useful, please star the repository on GitHub!
-# Run installer
-./install.sh
