@@ -61,6 +61,8 @@ This is a **FREE proxy manager** that lets you:
 
 ## 🚀 Installation
 
+Below are four separate installation options. Choose the one that fits your platform.
+
 ### Option 1: One-Click Installer (Recommended)
 
 ```bash
@@ -68,48 +70,67 @@ git clone https://github.com/S-MOKE-R/tor-controller.git
 cd tor-controller
 chmod +x install.sh
 ./install.sh
-
-
-
+```
 
 ---
+
 ### Option 2: Linux Manual Installation
-bash
-# Install dependencies
+
+```bash
+# Install system dependencies
 sudo apt update
 sudo apt install python3 python3-tk python3-pip tor privoxy proxychains4 -y
 
 # Install Python packages
-pip3 install requests psutil pyperclip pillow
+pip3 install -r requirements.txt
+# or individually:
+# pip3 install requests psutil pyperclip pillow
 
 # Run the app
 python3 tor_controller.py
-Option 3: Windows Installation
-powershell
+```
+
+---
+
+### Option 3: Windows Installation
+
+```powershell
 # Install Python from python.org (check "Add to PATH")
 
-# Open Command Prompt as Administrator
-pip install requests psutil pyperclip pillow
+# Open Command Prompt or PowerShell as Administrator
+pip install -r requirements.txt
+# or: pip install requests psutil pyperclip pillow
 
-# Download tor_controller.py from GitHub
-# Run
+# Download tor_controller.py from GitHub and run:
 python tor_controller.py
-Option 4: macOS Installation
-bash
-# Install Homebrew
+```
+
+---
+
+### Option 4: macOS Installation
+
+```bash
+# Install Homebrew (if needed)
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # Install dependencies
 brew install python3 tor
 
 # Install Python packages
-pip3 install requests psutil pyperclip pillow
+pip3 install -r requirements.txt
+# or: pip3 install requests psutil pyperclip pillow
 
-# Download and run
+# Run the app
 python3 tor_controller.py
-🔧 Configuration
-Linux (Tor & Privoxy)
-bash
+```
+
+---
+
+## 🔧 Configuration
+
+### Linux (Tor & Privoxy)
+
+```bash
 # Start Tor
 sudo systemctl start tor
 sudo systemctl enable tor
@@ -117,43 +138,69 @@ sudo systemctl enable tor
 # Start Privoxy (HTTP proxy)
 sudo systemctl start privoxy
 sudo systemctl enable privoxy
-Windows Configuration
-powershell
+```
+
+### Windows Configuration
+
+```powershell
 # Download and install Tor Browser from https://www.torproject.org/
-# Run Tor in the background
-# The app will use 127.0.0.1:9050 as the SOCKS5 proxy
-macOS Configuration
-bash
+# Run Tor in the background — the app expects SOCKS5 at 127.0.0.1:9050
+```
+
+### macOS Configuration
+
+```bash
 # Start Tor as a service
 brew services start tor
-🎯 Usage
+```
+
+---
+
+## 🎯 Usage
+
 Launch the App
-bash
+
+```bash
 python3 tor_controller.py
+```
+
 Quick Actions
-Button	Action
-🔒 CONNECT TO TOR	Enable Tor proxy
-🔓 DISCONNECT FROM TOR	Disable Tor proxy
-🔄 New Identity	Get a new Tor exit node
-📊 Refresh IP	Update IP display
-📋 Copy Current	Copy IP to clipboard
-⚙️ Settings	Configure auto-start
-📝 Commands
-Command	Description
-CONNECT TO TOR	Enable Tor proxy
-DISCONNECT FROM TOR	Disable Tor proxy
-Timer	Auto-disconnect after set time
-Download Helper	Download files via proxychains
-🛠️ Troubleshooting
+
+| Button | Action |
+|---|---|
+| 🔒 CONNECT TO TOR | Enable Tor proxy |
+| 🔓 DISCONNECT FROM TOR | Disable Tor proxy |
+| 🔄 New Identity | Get a new Tor exit node |
+| 📊 Refresh IP | Update IP display |
+| 📋 Copy Current | Copy IP to clipboard |
+| ⚙️ Settings | Configure auto-start |
+
+Commands
+
+| Command | Description |
+|---|---|
+| CONNECT TO TOR | Enable Tor proxy |
+| DISCONNECT FROM TOR | Disable Tor proxy |
+| Timer | Auto-disconnect after set time |
+| Download Helper | Download files via proxychains |
+
+---
+
+## 🛠️ Troubleshooting
+
 Error: "proxychains4 not found"
-bash
+
+```bash
 # Linux
 sudo apt install proxychains4 -y
 
 # macOS
 brew install proxychains-ng
+```
+
 Error: "Tor is not running"
-bash
+
+```bash
 # Linux
 sudo systemctl start tor
 
@@ -162,30 +209,45 @@ brew services start tor
 
 # Windows
 # Start Tor Browser from the start menu
+```
+
 Error: "No module named tkinter"
-bash
+
+```bash
 # Linux
 sudo apt install python3-tk -y
 
 # Windows/macOS
 # tkinter is included with Python by default
-📁 Project Structure
-text
+```
+
+---
+
+## 📁 Project Structure
+
+```
 tor-controller/
 ├── tor_controller.py   # Main application
 ├── README.md           # Documentation
 ├── LICENSE             # MIT License
 ├── requirements.txt    # Python dependencies
 └── install.sh          # One-click installer
-👨‍💻 Credits
-Platform	Link
-Developer	@S_MOKE_R
-GitHub	S-MOKE-R
-Telegram	@S_MOKE_R
-Channel	VOID_SMOKER
-Powered By	Tor Project
-📄 License
+```
+
+## 👨‍💻 Credits
+
+| Platform | Link |
+|---|---|
+| Developer | @S_MOKE_R |
+| GitHub | S-MOKE-R |
+| Telegram | @S_MOKE_R |
+| Channel | VOID_SMOKER |
+| Powered By | Tor Project |
+
+## 📄 License
+
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 ⭐ Support
+
 If you find this useful, please star the repository on GitHub!
