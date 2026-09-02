@@ -1,4 +1,4 @@
- 🔒 Tor Controller Pro v1.0
+ #🔒 Tor Controller Pro v1.0
 
 **Developer:** [@S_MOKE_R](https://t.me/S_MOKE_R)  
 **GitHub:** [https://github.com/S-MOKE-R](https://github.com/S-MOKE-R)  
