@@ -42,7 +42,10 @@ wget -O tor_controller.py https://raw.githubusercontent.com/S-MOKE-R/tor-control
 
 # Run
 python3 tor_controller.py
+
+
 Windows
+
 powershell
 # Install Python from python.org (make sure to check "Add to PATH")
 # Then open Command Prompt or PowerShell as Administrator
@@ -63,7 +66,10 @@ Run Tor in the background
 
 The app will connect to Tor on 127.0.0.1:9050
 
+
 macOS
+
+
 bash
 # Install Homebrew if not installed
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
