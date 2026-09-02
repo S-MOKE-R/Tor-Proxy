@@ -5,7 +5,25 @@
 **Telegram:** [https://t.me/S_MOKE_R](https://t.me/S_MOKE_R)  
 **Channel:** [https://t.me/VOID_SMOKER](https://t.me/VOID_SMOKER)
 
-A professional Tor proxy manager with a modern GUI for Linux, Windows, and macOS.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)
+[![Platform](https://img.shields.io/badge/Platform-Linux%20%7C%20Windows%20%7C%20macOS-green)](https://www.linux.org/)
+
+**Tor Controller Pro** is a free, open-source GUI tool that helps you manage Tor proxy connections with ease. It's designed to be simple, fast, and privacy-focused.
+
+---
+
+## 🎯 What is This Tool?
+
+This is a **FREE proxy manager** that lets you:
+- Connect/disconnect to Tor with one click
+- See your real IP and Tor IP side by side
+- Get a new Tor identity instantly
+- Set auto-disconnect timers
+- Download files through Tor via proxychains
+- 4 themes: Dark, Light, Hacker, Blue
+
+**It does NOT require any paid API or subscription. It's completely FREE.**
 
 ---
 
@@ -24,6 +42,7 @@ A professional Tor proxy manager with a modern GUI for Linux, Windows, and macOS
 | **4 Themes** | Dark, Light, Hacker, Blue |
 | **Download Helper** | Download files through Tor via proxychains |
 | **Cross-platform** | Works on Linux, Windows, macOS |
+| **100% Free** | No subscriptions, no hidden fees |
 
 ---
 
@@ -32,46 +51,39 @@ A professional Tor proxy manager with a modern GUI for Linux, Windows, and macOS
 ### Linux (Debian/Ubuntu/Mint/Kali)
 
 ```bash
+# Clone the repository
+git clone https://github.com/S-MOKE-R/tor-controller.git
+cd tor-controller
+
+# Make installer executable
+chmod +x install.sh
+
+# Run installer
+./install.sh
+Manual Installation (Linux)
+bash
 # Install dependencies
 sudo apt update
 sudo apt install python3 python3-tk python3-pip tor privoxy proxychains4 -y
+
+# Install Python packages
 pip3 install requests psutil pyperclip pillow
 
-# Download the script
-wget -O tor_controller.py https://raw.githubusercontent.com/S-MOKE-R/tor-controller/main/tor_controller.py
-
-# Run
+# Run the app
 python3 tor_controller.py
-
-
 Windows
-
 powershell
-# Install Python from python.org (make sure to check "Add to PATH")
-# Then open Command Prompt or PowerShell as Administrator
+# Install Python from python.org (check "Add to PATH")
 
-# Install dependencies
+# Open Command Prompt as Administrator
 pip install requests psutil pyperclip pillow
 
-# Download the script
-curl -o tor_controller.py https://raw.githubusercontent.com/S-MOKE-R/tor-controller/main/tor_controller.py
-
+# Download tor_controller.py from GitHub
 # Run
 python tor_controller.py
-Note: Tor must be installed separately on Windows:
-
-Download Tor from https://www.torproject.org/download/
-
-Run Tor in the background
-
-The app will connect to Tor on 127.0.0.1:9050
-
-
 macOS
-
-
 bash
-# Install Homebrew if not installed
+# Install Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # Install dependencies
@@ -80,10 +92,7 @@ brew install python3 tor
 # Install Python packages
 pip3 install requests psutil pyperclip pillow
 
-# Download the script
-curl -o tor_controller.py https://raw.githubusercontent.com/S-MOKE-R/tor-controller/main/tor_controller.py
-
-# Run
+# Download and run
 python3 tor_controller.py
 🔧 Configuration
 Linux (Tor & Privoxy)
@@ -95,25 +104,14 @@ sudo systemctl enable tor
 # Start Privoxy (HTTP proxy)
 sudo systemctl start privoxy
 sudo systemctl enable privoxy
-Windows (Manual Setup)
-Install Tor Browser from https://www.torproject.org/
-
-Run Tor in the background
-
-The app will use 127.0.0.1:9050 as the SOCKS5 proxy
-
-macOS (Manual Setup)
-bash
-# Start Tor
-brew services start tor
-
-# The app will use 127.0.0.1:9050 as the SOCKS5 proxy
 🎯 Usage
 Launch the App
 bash
 python3 tor_controller.py
 Quick Actions
 Button	Action
+🔒 CONNECT TO TOR	Enable Tor proxy
+🔓 DISCONNECT FROM TOR	Disable Tor proxy
 🔄 New Identity	Get a new Tor exit node
 📊 Refresh IP	Update IP display
 📋 Copy Current	Copy IP to clipboard
@@ -124,28 +122,6 @@ CONNECT TO TOR	Enable Tor proxy
 DISCONNECT FROM TOR	Disable Tor proxy
 Timer	Auto-disconnect after set time
 Download Helper	Download files via proxychains
-⚙️ Modes
-Normal Mode
-Connects/disconnects Tor proxy
-
-Shows IP addresses
-
-Timer and presets
-
-Advanced Mode
-New identity
-
-Download helper
-
-Log export
-
-📁 Project Structure
-text
-tor-controller/
-├── tor_controller.py   # Main application
-├── README.md           # Documentation
-├── LICENSE             # MIT License
-└── requirements.txt    # Python dependencies
 🛠️ Troubleshooting
 Error: "proxychains4 not found"
 bash
@@ -161,16 +137,18 @@ sudo systemctl start tor
 
 # macOS
 brew services start tor
-
-# Windows
-# Start Tor Browser from the start menu
 Error: "No module named tkinter"
 bash
 # Linux
 sudo apt install python3-tk -y
-
-# Windows/macOS
-# tkinter is included with Python by default
+📁 Project Structure
+text
+tor-controller/
+├── tor_controller.py   # Main application
+├── README.md           # Documentation
+├── LICENSE             # MIT License
+├── requirements.txt    # Python dependencies
+└── install.sh          # One-click installer
 👨‍💻 Credits
 Platform	Link
 Developer	@S_MOKE_R
@@ -181,14 +159,5 @@ Powered By	Tor Project
 📄 License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-💬 Support
-For support, questions, or contributions:
-
-Join the Telegram channel: https://t.me/VOID_SMOKER
-
-Open an issue on GitHub: Issues
-
-Fork the repository: Fork
-
-⭐ Star the Project
+⭐ Support
 If you find this useful, please star the repository on GitHub!
