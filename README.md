@@ -1,5 +1,3 @@
-nano ~/README_TOR.md
-markdown
 # 🔒 Tor Controller Pro v1.0
 
 **Developer:** [@S_MOKE_R](https://t.me/S_MOKE_R)  
