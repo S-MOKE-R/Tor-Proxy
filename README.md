@@ -13,6 +13,18 @@
 
 ---
 
+## 💻 System Requirements
+
+| Component | Requirement |
+|-----------|-------------|
+| **Operating System** | Linux (Ubuntu, Mint, Kali, Debian), Windows 10/11, macOS 10.15+ |
+| **Python** | 3.8 or higher |
+| **RAM** | 512 MB minimum (1 GB recommended) |
+| **Disk Space** | 50 MB for the app + Tor installation |
+| **Network** | Internet connection for Tor network access |
+
+---
+
 ## 🎯 What is This Tool?
 
 This is a **FREE proxy manager** that lets you:
@@ -58,9 +70,10 @@ cd tor-controller
 # Make installer executable
 chmod +x install.sh
 
-# Run installer
-./install.sh
-Manual Installation (Linux)
+
+
+Linux Manual Installation
+
 bash
 # Install dependencies
 sudo apt update
@@ -71,6 +84,7 @@ pip3 install requests psutil pyperclip pillow
 
 # Run the app
 python3 tor_controller.py
+
 Windows
 powershell
 # Install Python from python.org (check "Add to PATH")
@@ -81,6 +95,7 @@ pip install requests psutil pyperclip pillow
 # Download tor_controller.py from GitHub
 # Run
 python tor_controller.py
+
 macOS
 bash
 # Install Homebrew
@@ -94,6 +109,7 @@ pip3 install requests psutil pyperclip pillow
 
 # Download and run
 python3 tor_controller.py
+
 🔧 Configuration
 Linux (Tor & Privoxy)
 bash
@@ -104,6 +120,16 @@ sudo systemctl enable tor
 # Start Privoxy (HTTP proxy)
 sudo systemctl start privoxy
 sudo systemctl enable privoxy
+
+Windows
+# Download and install Tor Browser from https://www.torproject.org/
+# Run Tor in the background
+# The app will use 127.0.0.1:9050 as the SOCKS5 proxy
+
+macOS
+# Start Tor as a service
+brew services start tor
+
 🎯 Usage
 Launch the App
 bash
@@ -137,10 +163,16 @@ sudo systemctl start tor
 
 # macOS
 brew services start tor
+
+# Windows
+# Start Tor Browser from the start menu
 Error: "No module named tkinter"
 bash
 # Linux
 sudo apt install python3-tk -y
+
+# Windows/macOS
+# tkinter is included with Python by default
 📁 Project Structure
 text
 tor-controller/
@@ -161,3 +193,5 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ⭐ Support
 If you find this useful, please star the repository on GitHub!
+# Run installer
+./install.sh
